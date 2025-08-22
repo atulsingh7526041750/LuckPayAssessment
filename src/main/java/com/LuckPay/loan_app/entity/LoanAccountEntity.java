@@ -2,8 +2,8 @@ package com.LuckPay.loan_app.entity;
 
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "loan_account")
@@ -22,46 +22,24 @@ public class LoanAccountEntity {
     @Column(name = "emi_amount", nullable = false)
     private BigDecimal emiAmount;
 
-    // ✅ Default constructor (required by JPA)
     public LoanAccountEntity() {}
 
-    // ✅ Parameterized constructor
     public LoanAccountEntity(String loanAccountNumber, LocalDate dueDate, BigDecimal emiAmount) {
         this.loanAccountNumber = loanAccountNumber;
         this.dueDate = dueDate;
         this.emiAmount = emiAmount;
     }
 
-    // Getters and setters
-    public Long getId() {
-        return id;
-    }
+    // Getters & Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public String getLoanAccountNumber() { return loanAccountNumber; }
+    public void setLoanAccountNumber(String loanAccountNumber) { this.loanAccountNumber = loanAccountNumber; }
 
-    public String getLoanAccountNumber() {
-        return loanAccountNumber;
-    }
+    public LocalDate getDueDate() { return dueDate; }
+    public void setDueDate(LocalDate dueDate) { this.dueDate = dueDate; }
 
-    public void setLoanAccountNumber(String loanAccountNumber) {
-        this.loanAccountNumber = loanAccountNumber;
-    }
-
-    public LocalDate getDueDate() {
-        return dueDate;
-    }
-
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
-    }
-
-    public BigDecimal getEmiAmount() {
-        return emiAmount;
-    }
-
-    public void setEmiAmount(BigDecimal emiAmount) {
-        this.emiAmount = emiAmount;
-    }
+    public BigDecimal getEmiAmount() { return emiAmount; }
+    public void setEmiAmount(BigDecimal emiAmount) { this.emiAmount = emiAmount; }
 }
