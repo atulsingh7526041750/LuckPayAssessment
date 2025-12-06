@@ -34,11 +34,12 @@ public class ExternalApiIntegration {
         try {
             ResponseEntity<ExternalApiResponse> response = restTemplate.getForEntity(
                     url, ExternalApiResponse.class);
-
             logger.info("External API response status: {}", response.getStatusCode());
+            logger.info("External API response status: {}", response.getBody().toString());
             return response.getBody();
 
         } catch (HttpClientErrorException e) {
+
             logger.error("Client error when calling external API: {}", e.getStatusCode(), e);
             throw new ExternalApiException("Client error when calling external API: " + e.getStatusCode(), e);
         } catch (HttpServerErrorException e) {

@@ -24,7 +24,6 @@ import java.util.Optional;
 public class LoanAccountService {
     private static final Logger logger = LoggerFactory.getLogger(LoanAccountService.class);
     private static final DateTimeFormatter MONTH_FORMATTER = DateTimeFormatter.ofPattern("MMMM yyyy");
-
     private final ExternalApiIntegration externalApiIntegration;
     private final LoanAccountRepository loanAccountRepository;
     private final EMIDetailRepository emiDetailRepository;

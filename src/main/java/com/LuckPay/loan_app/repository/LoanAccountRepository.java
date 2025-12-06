@@ -2,7 +2,7 @@ package com.LuckPay.loan_app.repository;
 
 
 
-import com.LuckPay.loan_app.entity.LoanAccountEntity;
+//import com.LuckPay.loan_app.entity.LoanAccountEntity;
 import com.LuckPay.loan_app.model.LoanAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

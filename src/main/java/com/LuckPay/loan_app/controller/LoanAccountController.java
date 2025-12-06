@@ -1,8 +1,7 @@
 package com.LuckPay.loan_app.controller;
 
-
-
 import com.LuckPay.loan_app.dto.LoanAccountResponse;
+
 import com.LuckPay.loan_app.service.LoanAccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,14 +25,8 @@ public class LoanAccountController {
 
         logger.info("Received request for loan account: {}", loanAccountNumber);
 
-        try {
-            LoanAccountResponse response = loanAccountService.processLoanAccount(loanAccountNumber);
-            logger.info("Successfully processed loan account: {}", loanAccountNumber);
-            return ResponseEntity.ok(response);
-
-        } catch (Exception e) {
-            logger.error("Error processing loan account {}: {}", loanAccountNumber, e.getMessage(), e);
-            return ResponseEntity.internalServerError().build();
-        }
+        LoanAccountResponse response = loanAccountService.processLoanAccount(loanAccountNumber);
+        logger.info("Successfully processed loan account: {}", loanAccountNumber);
+        return ResponseEntity.ok(response);
     }
 }
