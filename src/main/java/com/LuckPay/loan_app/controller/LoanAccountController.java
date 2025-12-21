@@ -19,6 +19,12 @@ public class LoanAccountController {
         this.loanAccountService = loanAccountService;
     }
 
+
+    @GetMapping("/test")
+    public String test(){
+        System.out.println("this is the git change in dev2");
+        return "Test is ohk";
+
     @GetMapping("/healthCheck")
     public String checkHealth(){
         System.out.println("this is the code change in dev 1 ");
