@@ -19,6 +19,13 @@ public class LoanAccountController {
         this.loanAccountService = loanAccountService;
     }
 
+
+    @GetMapping("/test")
+    public String test(){
+        return "Test is ohk";
+
+    }
+
     @GetMapping("/{loanAccountNumber}")
     public ResponseEntity<LoanAccountResponse> getLoanAccountDetails(
             @PathVariable String loanAccountNumber) {
