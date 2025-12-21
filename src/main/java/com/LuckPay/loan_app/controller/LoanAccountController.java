@@ -22,6 +22,7 @@ public class LoanAccountController {
 
     @GetMapping("/test")
     public String test(){
+        System.out.println("this is the git change in dev2");
         return "Test is ohk";
 
     }
