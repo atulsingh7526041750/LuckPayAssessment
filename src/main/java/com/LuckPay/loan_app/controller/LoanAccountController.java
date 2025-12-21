@@ -19,11 +19,9 @@ public class LoanAccountController {
         this.loanAccountService = loanAccountService;
     }
 
-
-    @GetMapping("/test")
-    public String test(){
-        return "Test is ohk";
-
+    @GetMapping("/healthCheck")
+    public String checkHealth(){
+        return "Health is ohk";
     }
 
     @GetMapping("/{loanAccountNumber}")
