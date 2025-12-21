@@ -25,6 +25,9 @@ public class LoanAccountController {
         System.out.println("this is the git change in dev2");
         return "Test is ohk";
 
+    @GetMapping("/healthCheck")
+    public String checkHealth(){
+        return "Health is ohk";
     }
 
     @GetMapping("/{loanAccountNumber}")
