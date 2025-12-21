@@ -11,5 +11,6 @@ public class ExternalApiException extends RuntimeException {
         super(message, cause);
         System.out.println("Till herer====================================+++++++++++"+message);
         System.out.println("Till herer====================================+++++++++++"+cause);
+
     }
 }
